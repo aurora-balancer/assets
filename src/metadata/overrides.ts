@@ -9,7 +9,7 @@ export type Assets = {
   trustWallet: string[];
 };
 
-export const networkNameMap: Record<Partial<Network, string> = {
+export const networkNameMap: Record<Network, string> = {
   [Network.Homestead]: "ethereum",
   [Network.Kovan]: "ethereum",
   [Network.Polygon]: "polygon",
