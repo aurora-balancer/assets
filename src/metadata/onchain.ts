@@ -1,6 +1,6 @@
 import { Interface } from "@ethersproject/abi";
 import { Contract } from "@ethersproject/contracts";
-import { InfuraProvider } from "@ethersproject/providers";
+import { InfuraProvider, JsonRpcProvider } from "@ethersproject/providers";
 import { parseBytes32String } from "@ethersproject/strings";
 import { TokenInfo } from "@uniswap/token-lists";
 
@@ -13,6 +13,8 @@ const providers = {
   homestead: new InfuraProvider("homestead", infuraKey),
   polygon: new InfuraProvider("matic", infuraKey),
   arbitrum: new InfuraProvider("arbitrum", infuraKey),
+  auroratest: new JsonRpcProvider("https://testnet.aurora.dev"),
+  aurora: new JsonRpcProvider("https://mainnet.aurora.dev"),
 };
 
 export const chainIdMap = {
@@ -20,6 +22,8 @@ export const chainIdMap = {
   kovan: 42,
   polygon: 137,
   arbitrum: 42161,
+  aurora: 1313161554,
+  auroratest: 1313161555,
 };
 
 const multicallContract = {
@@ -27,6 +31,8 @@ const multicallContract = {
   kovan: "0x5ba1e12693dc8f9c48aad8770482f4739beed696",
   polygon: "0xe2530198A125Dcdc8Fc5476e07BFDFb5203f1102",
   arbitrum: "0xd67950096d029af421a946ffb1e04c94caf8e256",
+  aurora: "0x49eb1F160e167aa7bA96BdD88B6C1f2ffda5212A",
+  auroratest: "0x1A889db259E05570d13c9f129e9bDD2E70F15A4D",
 };
 
 const erc20ABI = [

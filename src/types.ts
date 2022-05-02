@@ -5,6 +5,8 @@ export enum Network {
   Kovan = "kovan",
   Polygon = "polygon",
   Arbitrum = "arbitrum",
+  Aurora = 'aurora',
+  AuroraTest = 'auroratest'
 }
 
 export enum List {

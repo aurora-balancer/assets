@@ -48,9 +48,10 @@ async function run(network?: Network) {
       await buildNetworkLists(network);
     } else {
       // await buildNetworkLists(Network.Homestead);
-      await buildNetworkLists(Network.Kovan);
-      await buildNetworkLists(Network.Polygon);
-      await buildNetworkLists(Network.Arbitrum);
+      // await buildNetworkLists(Network.Kovan);
+      // await buildNetworkLists(Network.Polygon);
+      // await buildNetworkLists(Network.Arbitrum);
+      await buildNetworkLists(Network.AuroraTest);
     }
   } catch (e) {
     console.error(e);
@@ -92,14 +93,14 @@ async function buildListFromFile(
     // Most likely a new tokenlist which we haven't generated before
   }
 
-  const existingMetadata = await getExistingMetadata(
-    network,
-    currentTokenList?.tokens
-  );
+  // const existingMetadata = await getExistingMetadata(
+  //   network,
+  //   currentTokenList?.tokens
+  // );
   const listedTokens = await getTokens(
     onchainMetadata,
     {
-      ...existingMetadata,
+      // ...existingMetadata,
       ...metadataOverwrite,
     },
     network

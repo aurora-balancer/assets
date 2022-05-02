@@ -12,6 +12,8 @@ const platformIdMap: Record<Network, string> = {
   [Network.Kovan]: "ethereum",
   [Network.Polygon]: "polygon-pos",
   [Network.Arbitrum]: "arbitrum-one",
+  [Network.Aurora]: "aurora",
+  [Network.AuroraTest]: "auroratest",
 };
 
 export const getCoingeckoMetadata = async (

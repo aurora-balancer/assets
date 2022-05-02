@@ -9,11 +9,13 @@ export type Assets = {
   trustWallet: string[];
 };
 
-export const networkNameMap: Record<Network, string> = {
+export const networkNameMap: Record<Partial<Network, string> = {
   [Network.Homestead]: "ethereum",
   [Network.Kovan]: "ethereum",
   [Network.Polygon]: "polygon",
   [Network.Arbitrum]: "ethereum",
+  [Network.Aurora]: "aurora",
+  [Network.AuroraTest]: "auroratest",
 };
 
 export async function getExistingMetadata(
